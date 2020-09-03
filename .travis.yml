@@ -27,4 +27,4 @@ before_install:
 
 script:
   - cd kubeflow/components/profile-controller
-  - docker buildx build --push --platform linux/arm64 -t ${REPO_PREFIX}/profile-controller:${CODE_TAG} -f Dockerfile .
+  - docker buildx build --push --platform linux/amd64,linux/arm64 -t ${REPO_PREFIX}/profile-controller:${CODE_TAG} -f Dockerfile .
